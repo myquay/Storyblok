@@ -1,8 +1,10 @@
 ﻿using System;
 using Adliance.Storyblok.Clients;
 using Adliance.Storyblok.Sitemap;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedMethodReturnValue.Global

@@ -66,7 +66,6 @@ namespace Adliance.Storyblok.Extensions
             app.MapWhen(context => !string.IsNullOrWhiteSpace(options?.Value.SlugForClearingCache) && context.Request.Path.StartsWithSegments("/" + options.Value.SlugForClearingCache.Trim('/'), StringComparison.OrdinalIgnoreCase),
                 appBuilder => { appBuilder.UseMiddleware<StoryblokClearCacheMiddleware>(); });
 
-            app.UseRequestLocalization();
             app.UseMiddleware<StoryblokMiddleware>();
 
             return app;
